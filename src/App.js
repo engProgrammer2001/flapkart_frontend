@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Homepage from "./Pages/Homepag/Homepage";
+import Cart from "./customer/components/Cart/Cart";
+import CheckOut from "./customer/components/CheckOut/CheckOut";
+import Footer from "./customer/components/Footer/Footer";
+import Navigation from "./customer/components/Navigation/Navigation";
+import Order from "./customer/components/Order/Order";
+import OrderDetails from "./customer/components/Order/OrderDetails";
+import ProductDetails from "./customer/components/ProductDetails/ProductDetails";
+import Product from "./customer/components/Products/Product";
+import CustomerRouters from "./Routes/CustomerRouters";
+import Admin from "./Admin/components/Admin";
+import AdminRouters from "./Routes/AdminRouters";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Routes>
+        <Route path="/*" element={<CustomerRouters />}></Route>
+        <Route path="/admin/*" element={<AdminRouters />}></Route>
+      </Routes>
     </div>
   );
 }

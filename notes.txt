@@ -1,0 +1,8 @@
+
+
+
+MUI.com - https://mui.com/material-ui/getting-started/installation/
+MUI Icons - https://mui.com/material-ui/material-icons/
+taillwind css - https://tailwindcss.com/docs/guides/create-react-app
+
+
