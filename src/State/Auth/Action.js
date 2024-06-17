@@ -38,8 +38,6 @@ export const register = (userData) => async (dispatch) => {
       localStorage.setItem("lastName", user.user.lastName);
       localStorage.setItem("role", user.user.role);
     }
-    // it will print data on console
-    // console.log("user ", user);
     dispatch(registerSuccess(user.jwt));
   } catch (error) {
     dispatch(registerFailure(error.message));
@@ -97,6 +95,7 @@ export const getUser = (jwt) => async (dispatch) => {
 export const logOut = () => (dispatch) => {
   dispatch({ type: LOGOUT, payload: null });
   localStorage.clear();
+  window.location.href = "/login";
 };
 
 export const getAllUsers = () => async (dispatch) => {

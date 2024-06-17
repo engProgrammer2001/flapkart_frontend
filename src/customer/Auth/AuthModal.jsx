@@ -26,7 +26,7 @@ const AuthModal = ({ handleClose, open }) => {
   useEffect(() => {
     if (auth.user) {
       handleClose();
-      if (auth.user?.role === "ADMIN") {
+      if (auth.user?.role === "ADMIN" && location.pathname === "/register/flapkart-register") {
         navigate("/admin");
       }
     }

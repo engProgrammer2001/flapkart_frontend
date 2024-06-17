@@ -15,7 +15,7 @@ const OrderDetails = () => {
   const navigate = useNavigate();
   const { order } = useSelector((store) => store);
 
-  console.log("order Details page order is : ", order.order);
+  // console.log("order Details page order is : ", order.order);
 
   useEffect(() => {
     dispatch(getOrderById(orderId.orderId));

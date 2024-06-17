@@ -1,12 +1,14 @@
 import { Button, Grid, TextField } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../State/Auth/Action";
+import BackDropComponent from "../components/Backdrop/Backdrop";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [isLoaderOpen, setIsLoaderOpen] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,6 +24,20 @@ const LoginForm = () => {
     console.log("userdata is : ", userData);
   };
 
+  useEffect(() => {
+    setIsLoaderOpen(true);
+    setTimeout(() => {
+      setIsLoaderOpen(false);
+    }, 2000);
+  }, []);
+
+  // useEffect(() => {
+  //   if (products.loading) {
+  //     setIsLoaderOpen(true);
+  //   } else {
+  //     setIsLoaderOpen(false);
+  //   }
+  // }, [products.loading]);
 
   return (
     <div>
@@ -72,6 +88,7 @@ const LoginForm = () => {
           </Button>
         </div>
       </div>
+      <BackDropComponent open={isLoaderOpen} />
     </div>
   );
 };

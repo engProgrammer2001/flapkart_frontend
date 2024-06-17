@@ -6,6 +6,7 @@ import IphoneCoverData from '../../Data/IphoneCoverData';
 import ChargerData from '../../Data/ChargrData';
 
 const Homepage = () => {
+  // const filteredMobileData = MobileData.filter(item => item.brand === 'Oppo');
   return (
     <div>
         <MainCarosel/>

@@ -7,11 +7,6 @@ import { Button } from "@mui/material";
 const HomeSectionCarosel = ({ data, sectionName }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // const responsive = {
-  //   0: { items: 1 },
-  //   720: { items: 5 },
-  //   1024: { items: 5 },
-  // };
 
   const responsive = {
     0: {
