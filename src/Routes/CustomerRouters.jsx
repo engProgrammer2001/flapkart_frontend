@@ -14,9 +14,9 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import PaymentSuccess from "../customer/components/Payment/PaymentSuccess";
 import PageNotFound from "../Pages/PageNotFound";
-import LoginForm from "../customer/Auth/LoginFrom";
-import RegisterForm from "../customer/Auth/RegisterForm";
 import AdminRegisterForm from "../customer/Auth/AdminREgistrationForm";
+import SupportPage from "../Pages/Support/Support";
+import UserProfile from "../customer/components/UserProfile/UserProfile";
 
 const CustomerRouters = () => {
   return (
@@ -38,8 +38,10 @@ const CustomerRouters = () => {
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/account/order" element={<Order />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/account/order/:orderId" element={<OrderDetails />} />
         <Route path="/payment/:orderId" element={<PaymentSuccess />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <div>

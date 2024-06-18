@@ -15,7 +15,8 @@ const Order = () => {
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
   const { order } = useSelector((store) => store);
-  console.log("Order page Order is : ", order.orders);
+  
+  // console.log("Order page Order is : ", order.orders);
 
   
   useEffect(() => {

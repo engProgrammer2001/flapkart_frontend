@@ -82,12 +82,13 @@ export const getUser = (jwt) => async (dispatch) => {
         Authorization: `Bearer ${jwt}`,
       },
     });
-    // console.log("user ", response.data)
     const user = response.data;
+    // console.log("user get data is : ", response.data)
     // it will print data on console
     // console.log("user ", user)
     dispatch(getUserSuccess(user));
   } catch (error) {
+    console.log(error);
     dispatch(getUserFailure(error.message));
   }
 };

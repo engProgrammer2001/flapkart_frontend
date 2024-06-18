@@ -10,7 +10,7 @@ const Aboutpage = () => {
     <div>
       <div className="lg:py-20 py-4">
         <h1 className="text-4xl text-center font-bold text-blue-900">
-          About Flafkart
+          About Flapkart
         </h1>
       </div>
       <div className="lg:w-[80%] mx-auto items-center lg:my-8">

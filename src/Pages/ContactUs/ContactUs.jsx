@@ -25,10 +25,10 @@ const ContactUs = () => {
       </div>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">
-          Contact Flafkart
+          Contact Flapkart
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          We'd love to hear from you! Whether you have a question about our
+          We love to hear from you! Whether you have a question about our
           products, need assistance with an order, or just want to share your
           feedback, our team is here to help.
         </p>
@@ -133,6 +133,7 @@ const ContactUs = () => {
                   <option>Austria</option>
                   <option>Bangladesh</option>
                 </select>
+                
                 {/* <ChevronDownIcon
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
                   aria-hidden="true"
@@ -203,7 +204,7 @@ const ContactUs = () => {
           </button>
         </div>
       </form>
-
+      {/* 
       <div className="lg:w-full pt-12">
         <div className=" text-center">
           <h1 className="text-3xl font-bold text-blue-900">Find Flafkart</h1>
@@ -223,7 +224,7 @@ const ContactUs = () => {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -9,6 +9,8 @@ import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import PsychologyAltIcon from "@mui/icons-material/PsychologyAlt";
 import PaymentsIcon from '@mui/icons-material/Payments';
 import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
+import mainLogo from './WhatsApp Image 1946-03-14 at 18.22.18.jpeg';
+
 
 
 const Footer = () => {
@@ -56,6 +58,9 @@ const Footer = () => {
         container
         sx={{ bgcolor: "bg-blue-950", color: "white", py: 6 }}
       >
+        <Grid item align="center" xs={12} sm={6} md={3}>
+        <img className="h-32 w-auto my-10" src={mainLogo} alt="" />
+        </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Typography className="pb-5 font-extrabold underline" variant="h6">
             Company
@@ -71,69 +76,47 @@ const Footer = () => {
             </Button>
           </div>
           <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              press
-            </Button>
-          </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Jobs
-            </Button>
-          </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Partners
-            </Button>
-          </div>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Typography className="pb-5 font-extrabold underline" variant="h6">
-            Solutions
-          </Typography>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Marketing
-            </Button>
-          </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Analytics
-            </Button>
-          </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Commerce
-            </Button>
-          </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
+            <Button onClick={() => navigate("/support")} className="pb-5" variant="h6" gutterBottom>
               Support
             </Button>
           </div>
-          <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Insights
-            </Button>
-          </div>
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
           <Typography className="pb-5 font-extrabold underline" variant="h6">
-            Dcumentation
+            Category
           </Typography>
           <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              Guides
+            <Button onClick={() => navigate("/product/mobile/apple")}  className="pb-5" variant="h6" gutterBottom>
+              Apple
             </Button>
           </div>
           <div>
-            <Button className="pb-5" variant="h6" gutterBottom>
-              API Status
+            <Button onClick={() => navigate("/product/mobile/samsung")} className="pb-5" variant="h6" gutterBottom>
+              Sumsung
+            </Button>
+          </div>
+          <div>
+            <Button onClick={() => navigate("/product/mobile/vivo")} className="pb-5" variant="h6" gutterBottom>
+              Vivo
+            </Button>
+          </div>
+          <div>
+            <Button onClick={() => navigate("/product/mobile/oppo")} className="pb-5" variant="h6" gutterBottom>
+              Oppo
+            </Button>
+          </div>
+          <div>
+            <Button onClick={() => navigate("/product/mobile/redmi")} className="pb-5" variant="h6" gutterBottom>
+              Redmi
+            </Button>
+          </div>
+          <div>
+            <Button onClick={() => navigate("/product/mobile/realme")} className="pb-5" variant="h6" gutterBottom>
+              Realme
             </Button>
           </div>
         </Grid>
-
         <Grid item xs={12} sm={6} md={3}>
           <Typography className="pb-5 font-extrabold underline" variant="h6">
             Legal
@@ -145,7 +128,7 @@ const Footer = () => {
           </div>
           <div>
             <Button className="pb-5" variant="h6" gutterBottom>
-              Services
+            Shipping Policy
             </Button>
           </div>
           <div>
@@ -194,21 +177,21 @@ const Footer = () => {
           <div>
             <Link
               className="px-2"
-              href="https://www.instagram.com/"
+              href="#"
               target="_blank"
             >
               <InstagramIcon sx={{ fontSize: "30px", color: "#E4405F" }} />
             </Link>
             <Link
               className="px-2"
-              href="https://www.instagram.com/"
+              href="#"
               target="_blank"
             >
               <FacebookIcon sx={{ fontSize: "30px" }} />
             </Link>
             <Link
               className="px-2"
-              href="https://www.linkedin.com/in/ashok-kumar-kushwaha-1305b5224/"
+              href="#"
               target="_blank"
             >
               <LinkedInIcon sx={{ fontSize: "30px" }} />

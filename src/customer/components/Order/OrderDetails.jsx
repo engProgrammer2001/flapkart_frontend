@@ -21,7 +21,6 @@ const OrderDetails = () => {
     dispatch(getOrderById(orderId.orderId));
   },[]);
 
-
   return (
     <>
       {!order.loading && (

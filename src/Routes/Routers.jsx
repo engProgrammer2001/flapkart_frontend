@@ -29,8 +29,10 @@ const Routers = () => {
                 <Route path='/product/:productId' element={<ProductDetails />}></Route>
                 <Route path='/cart' element={<Cart />}></Route>
 
-                <Route path='/admin/ashok' element={<Admin />}></Route>
+
                 
+                <Route path='/admin' element={<Admin />}></Route>
+                {/* <Route path="/register/flapkart-register" element={<AdminRegisterForm />} /> */}
             </Routes>
         </div>
     </div>

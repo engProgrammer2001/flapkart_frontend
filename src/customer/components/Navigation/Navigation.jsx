@@ -82,11 +82,22 @@ export default function Navigation() {
   }, [auth.user]);
 
   // funtion for logOut
+
+  const handleMyProfileClick = () => {
+    handleCloseUserMenu();
+    navigate("/profile");
+  }
+
+
   const handleLogout = () => {
     dispatch(logOut());
     handleCloseUserMenu();
   };
 
+  const handleMyOrderClick = () => {
+    handleCloseUserMenu();
+    navigate("/account/order");
+  };
   return (
     <div className="bg-white -z-1">
       {/* Mobile Menu */}
@@ -265,10 +276,10 @@ export default function Navigation() {
                             "aria-labelledby": "basic-button",
                           }}
                         >
-                          <MenuItem onClick={handleCloseUserMenu}>
+                          <MenuItem onClick={handleMyProfileClick} >
                             Profile
                           </MenuItem>
-                          <MenuItem onClick={() => navigate("/account/order")}>
+                          <MenuItem onClick={handleMyOrderClick}>
                             My Orders
                           </MenuItem>
                           <MenuItem onClick={handleLogout}>Logout</MenuItem>
@@ -513,10 +524,10 @@ export default function Navigation() {
                         onClose={handleCloseUserMenu}
                         MenuListProps={{ "aria-labelledby": "basic-button" }}
                       >
-                        <MenuItem onClick={handleCloseUserMenu}>
+                        <MenuItem onClick={handleMyProfileClick}>
                           Profile
                         </MenuItem>
-                        <MenuItem onClick={() => navigate("/account/order")}>
+                        <MenuItem onClick={handleMyOrderClick}>
                           My Orders
                         </MenuItem>
                         <MenuItem onClick={handleLogout}>Logout</MenuItem>

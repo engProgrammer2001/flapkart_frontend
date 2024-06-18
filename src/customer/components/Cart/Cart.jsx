@@ -28,7 +28,7 @@ const Cart = () => {
               <CartItem item={item} key={index} />
             ))
           ) : (
-            <h1 className="text-center text-blue-950 text-2xl pt-5">No items in the cart</h1>
+            <h1 className="text-center text-blue-950 text-2xl lg:text-5xl pt-5">No items in the cart</h1>
           )}
         </div>
         <div className="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
