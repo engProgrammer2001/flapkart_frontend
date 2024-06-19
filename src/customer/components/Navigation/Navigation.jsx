@@ -17,6 +17,7 @@ import { getUser, logOut } from "../../../State/Auth/Action";
 // import { getUser, logout } from "../../../Redux/Auth/Action";
 import mainLogo from "./WhatsApp Image 1946-03-14 at 18.22.18.jpeg";
 import { navigation } from "../../../config/NavigationMenu";
+import { toast } from "react-toastify";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -86,8 +87,7 @@ export default function Navigation() {
   const handleMyProfileClick = () => {
     handleCloseUserMenu();
     navigate("/profile");
-  }
-
+  };
 
   const handleLogout = () => {
     dispatch(logOut());
@@ -276,7 +276,7 @@ export default function Navigation() {
                             "aria-labelledby": "basic-button",
                           }}
                         >
-                          <MenuItem onClick={handleMyProfileClick} >
+                          <MenuItem onClick={handleMyProfileClick}>
                             Profile
                           </MenuItem>
                           <MenuItem onClick={handleMyOrderClick}>

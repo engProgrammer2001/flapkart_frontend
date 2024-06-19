@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../State/Auth/Action";
 import BackDropComponent from "../components/Backdrop/Backdrop";
+import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -19,8 +20,11 @@ const LoginForm = () => {
       email: data.get("email"),
       password: data.get("password"),
     };
-
     dispatch(login(userData))
+    toast.success("Login Successfully", {
+      position: "top-right",
+      autoClose: 4000,
+    })
     console.log("userdata is : ", userData);
   };
 

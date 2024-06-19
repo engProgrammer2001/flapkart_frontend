@@ -82,7 +82,7 @@ const Aboutpage = () => {
 
       <div className="ourwork lg:py-10 py-5 ">
         <div className="text-center text-3xl lg:text-5xl text-gray-600 font-bold">
-          <h1 className="underline text-blue-900 pb-10">Our Works.</h1>
+          <h1 className="underline text-white pb-10">Our Works.</h1>
         </div>
         <section className="grid lg:grid-cols-4 text-center py-5">
           <div className="p-3">

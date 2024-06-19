@@ -22,6 +22,7 @@
     "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
     "react-scroll-trigger": "^0.6.14",
+    "react-toastify": "^10.0.5",
     "redux": "^5.0.1",
     "redux-auth": "^0.0.5-beta5",
     "redux-thunk": "^3.1.0",

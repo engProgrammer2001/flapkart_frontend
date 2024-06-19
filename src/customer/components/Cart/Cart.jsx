@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 // import { getCart } from "../../../State/Cart/Action";
 import { addItemToCart, getCart } from "../../../State/Cart/Action";
+import NoItem from "./9960436.jpg";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -28,7 +29,12 @@ const Cart = () => {
               <CartItem item={item} key={index} />
             ))
           ) : (
-            <h1 className="text-center text-blue-950 text-2xl lg:text-5xl pt-5">No items in the cart</h1>
+            <div>
+              <h1 className="text-center text-blue-950 text-2xl lg:text-5xl pt-10">
+                No items in the cart
+              </h1>
+              <img className="mx-auto" width={300} height={300} src={NoItem} alt="" />
+            </div>
           )}
         </div>
         <div className="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">

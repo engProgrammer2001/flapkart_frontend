@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUser, register } from "../../State/Auth/Action";
 import BackDropComponent from "../components/Backdrop/Backdrop";
+import { toast } from "react-toastify";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
@@ -38,6 +39,10 @@ const RegisterForm = () => {
       role: data.get("role"),
     };
     dispatch(register(userData));
+    toast.success("Register Successfully!", {
+      position: "top-right",
+      autoClose: 4000,
+    })
   };
 
   const [role, setRole] = React.useState("");

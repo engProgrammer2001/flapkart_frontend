@@ -9,7 +9,6 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
-
 import { Fragment } from "react";
 import "./CreateProductForm.css";
 import { useDispatch } from "react-redux";

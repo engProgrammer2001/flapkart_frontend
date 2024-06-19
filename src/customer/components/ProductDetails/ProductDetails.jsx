@@ -11,6 +11,7 @@ import { findProductsById } from "../../../State/Product/Action";
 // import { store } from "../../../State/store";
 import { addItemToCart } from "../../../State/Cart/Action";
 import BackDropComponent from "../Backdrop/Backdrop";
+import { toast } from "react-toastify";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -89,6 +90,10 @@ export default function ProductDetails() {
   const handleAddToCart = () => {
     const data = {productId : params.productId, quantity: 1};
     dispatch(addItemToCart(data));
+    toast.success(`${products.product?.brand} Added To Cart`,{
+      position: "top-right",
+      autoClose: 5000,
+    });
     navigate("/cart");
   };
 

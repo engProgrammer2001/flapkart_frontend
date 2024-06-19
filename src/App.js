@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import Homepage from "./Pages/Homepag/Homepage";
 import Cart from "./customer/components/Cart/Cart";
 import CheckOut from "./customer/components/CheckOut/CheckOut";
@@ -12,10 +13,12 @@ import Product from "./customer/components/Products/Product";
 import CustomerRouters from "./Routes/CustomerRouters";
 import Admin from "./Admin/components/Admin";
 import AdminRouters from "./Routes/AdminRouters";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div className="">
+      <ToastContainer />
       <Routes>
         <Route path="/*" element={<CustomerRouters />}></Route>
         <Route path="/admin/*" element={<AdminRouters />}></Route>

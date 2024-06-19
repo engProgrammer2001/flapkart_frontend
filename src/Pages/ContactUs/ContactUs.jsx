@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -124,8 +124,8 @@ const ContactUs = () => {
                   name="country"
                   className="h-full rounded-md border-0 bg-transparent bg-none pl-5 py-0 text-white-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
-                  <option>US</option>
                   <option>IND</option>
+                  <option>US</option>
                   <option>EU</option>
                   <option>Afghanistan</option>
                   <option>Angola</option>
@@ -188,9 +188,9 @@ const ContactUs = () => {
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <a href="/privacy" className="font-semibold text-indigo-900">
+              <Link to="/privacy" className="font-semibold text-indigo-900">
                 privacy&nbsp;policy
-              </a>
+              </Link>
             </Switch.Label>
           </Switch.Group>
         </div>
